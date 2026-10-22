@@ -1,0 +1,3086 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>MAISON LUMINA — Centre de Haute Dermatologie & Clinical Research Institute</title>
+  <meta name="description" content="Pusat dermatologi medis, teknologi laser presisi tinggi, dan bio-regenerasi seluler terdepan di Indonesia. Didukung oleh dewan dokter spesialis kulit Sp.D.V.E dan akreditasi internasional.">
+
+  <!-- Fonts: Cinzel, Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       MAISON LUMINA DESIGN SYSTEM — HIGH-PRECISION AESTHETIC ECOSYSTEM (2026)
+       ========================================================================== */
+    :root {
+      --void: #060504;
+      --surface-1: #0C0A09;
+      --surface-2: #14120F;
+      --surface-3: #1C1915;
+      --surface-4: #25211B;
+
+      --gold-100: #FDF9F2;
+      --gold-200: #F3E5CE;
+      --gold-300: #DEC498;
+      --gold-400: #C7A267;
+      --gold-500: #B0853D;
+      --gold-600: #886226;
+      --gold-grad: linear-gradient(135deg, #FFF6E5 0%, #E3C799 45%, #9E7434 100%);
+      --gold-grad-soft: linear-gradient(135deg, rgba(227, 199, 153, 0.15) 0%, rgba(158, 116, 52, 0.03) 100%);
+
+      --medical-cyan: #38BDF8;
+      --medical-emerald: #10B981;
+      --medical-rose: #FB7185;
+      --medical-violet: #A855F7;
+
+      --text-1: #FFFFFF;
+      --text-2: #EAE5DE;
+      --text-3: #9E968B;
+      --text-4: #60594F;
+
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-medium: rgba(222, 196, 152, 0.2);
+      --border-bright: rgba(222, 196, 152, 0.45);
+
+      --font-display: 'Cinzel', serif;
+      --font-editorial: 'Cormorant Garamond', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      --shadow-luxe: 0 20px 50px rgba(0, 0, 0, 0.7);
+      --shadow-gold: 0 10px 30px rgba(176, 133, 61, 0.25);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    section[id] {
+      scroll-margin-top: 88px;
+    }
+
+    body {
+      background-color: var(--void);
+      color: var(--text-2);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      position: relative;
+      selection-background-color: var(--gold-400);
+      selection-color: var(--void);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--void);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--surface-4);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-500);
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Typography Utilities */
+    .font-display { font-family: var(--font-display); }
+    .font-editorial { font-family: var(--font-editorial); }
+    .font-mono { font-family: var(--font-mono); }
+
+    .gold-gradient-text {
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .kicker-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 6px 16px;
+      background: var(--gold-grad-soft);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-300);
+    }
+    .kicker-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-400);
+      box-shadow: 0 0 8px var(--gold-400);
+    }
+
+    /* Buttons */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--gold-grad);
+      color: #0A0806;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      border-radius: var(--radius-full);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.35s var(--ease-out);
+      box-shadow: var(--shadow-gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 45px rgba(176, 133, 61, 0.45);
+    }
+
+    .btn-outline-luxe {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--text-1);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 17px 32px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-medium);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-luxe:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--gold-300);
+      color: var(--gold-200);
+    }
+
+    
+
+    /* ==========================================================================
+       MAIN NAVIGATION & LUXURY AMBIENT AUDIO TOGGLE
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+      background: rgba(6, 5, 4, 0.96);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-bottom: 1px solid var(--border-subtle);
+      width: 100%;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 88px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
+    .brand-insignia {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border-medium);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(199, 162, 103, 0.12), transparent);
+      position: relative;
+    }
+    .brand-insignia svg {
+      width: 24px;
+      height: 24px;
+      color: var(--gold-300);
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--text-1);
+      line-height: 1;
+    }
+    .brand-meta {
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-3);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-links a:hover {
+      color: var(--gold-200);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0%;
+      height: 1px;
+      background: var(--gold-400);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    
+
+    /* ==========================================================================
+       HERO STAGE & INTERACTIVE CANVAS EMITTER
+       ========================================================================== */
+    .hero-stage {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 0 120px;
+      overflow: hidden;
+    }
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.65;
+    }
+    .hero-ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-gold {
+      width: 600px;
+      height: 600px;
+      top: -150px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(176, 133, 61, 0.18), transparent 70%);
+    }
+    .glow-deep {
+      width: 700px;
+      height: 700px;
+      bottom: -200px;
+      left: -150px;
+      background: radial-gradient(circle, rgba(94, 30, 48, 0.14), transparent 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 78px);
+      font-weight: 500;
+      line-height: 1.08;
+      color: var(--text-1);
+      margin: 28px 0 24px;
+      letter-spacing: -0.5px;
+    }
+    .hero-title em {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-200);
+      display: block;
+    }
+    .hero-lead {
+      font-size: clamp(16px, 1.8vw, 19px);
+      color: var(--text-3);
+      line-height: 1.8;
+      max-width: 720px;
+      font-weight: 300;
+      margin-bottom: 45px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    /* Live Stat Bar */
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .metric-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold-200);
+      line-height: 1.1;
+    }
+    .metric-label {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-3);
+      margin-top: 6px;
+    }
+
+    /* ==========================================================================
+       SECTION WRAPPER & HEADINGS
+       ========================================================================== */
+    .section-block {
+      padding: 120px 0;
+      position: relative;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 70px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 500;
+      color: var(--text-1);
+      letter-spacing: 1px;
+      margin: 16px 0;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-3);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ==========================================================================
+       MODULE 1: HIGH-PRECISION DIGITAL FACE SCANNER & ANATOMY MAPPER
+       ========================================================================== */
+    .scanner-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      background: var(--surface-1);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-luxe);
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 992px) {
+      .scanner-layout {
+        grid-template-columns: 1.1fr 1fr;
+        padding: 60px;
+      }
+    }
+
+    .scanner-viewport {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, rgba(199, 162, 103, 0.08) 0%, transparent 70%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      min-height: 480px;
+      overflow: hidden;
+    }
+    .radar-sweep {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold-400) 50%, transparent 100%);
+      box-shadow: 0 0 15px var(--gold-400);
+      animation: sweepRadar 4s infinite linear;
+      z-index: 5;
+    }
+    @keyframes sweepRadar {
+      0% { top: 0%; opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    /* Face SVG & Interactive Touch Points */
+    .face-svg-wrapper {
+      position: relative;
+      width: 320px;
+      height: 400px;
+    }
+    .face-svg-wrapper svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 12px rgba(222, 196, 152, 0.15));
+    }
+
+    /* Target Pins */
+    .scan-pin {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+    .pin-core {
+      width: 10px;
+      height: 10px;
+      background: var(--gold-400);
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+    .pin-pulse {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--gold-400);
+      border-radius: 50%;
+      animation: pinPing 2s infinite ease-out;
+    }
+    .scan-pin:hover .pin-core,
+    .scan-pin.active .pin-core {
+      background: #FFF;
+      box-shadow: 0 0 15px #FFF;
+      transform: scale(1.4);
+    }
+    .scan-pin.active .pin-pulse {
+      border-color: #FFF;
+    }
+    @keyframes pinPing {
+      0% { transform: scale(0.6); opacity: 1; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* Diagnostic Analysis Output Panel */
+    .diagnostic-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid var(--border-subtle);
+      padding-left: 0;
+    }
+    @media (min-width: 992px) {
+      .diagnostic-panel {
+        padding-left: 40px;
+      }
+    }
+
+    .diag-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--medical-cyan);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    .diag-zone-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--text-1);
+      margin-bottom: 14px;
+    }
+    .diag-pathology {
+      font-size: 15px;
+      color: var(--text-3);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .depth-analyzer {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .depth-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .depth-bar-track {
+      width: 100%;
+      height: 6px;
+      background: var(--surface-4);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .depth-bar-fill {
+      height: 100%;
+      background: var(--gold-grad);
+      transition: width 0.6s var(--ease-out);
+    }
+
+    .prescribed-protocol {
+      background: rgba(199, 162, 103, 0.05);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 30px;
+    }
+    .protocol-label {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-400);
+      margin-bottom: 6px;
+    }
+    .protocol-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+    .protocol-desc {
+      font-size: 13.5px;
+      color: var(--text-3);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       MODULE 2: CLINICAL COST, SESSIONS & DOWNTIME CALCULATOR
+       ========================================================================== */
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      background: var(--surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-luxe);
+    }
+    @media (min-width: 992px) {
+      .calculator-grid {
+        grid-template-columns: 1.2fr 0.9fr;
+      }
+    }
+
+    .calc-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .input-row label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-2);
+      margin-bottom: 12px;
+    }
+    .input-row label span.val-badge {
+      color: var(--gold-300);
+      font-family: var(--font-mono);
+    }
+
+    .range-luxe {
+      width: 100%;
+      height: 8px;
+      background: var(--surface-3);
+      border-radius: 4px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+    .range-luxe::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold-grad);
+      border: 2px solid #FFF;
+      box-shadow: 0 0 10px rgba(176, 133, 61, 0.6);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .range-luxe::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .calc-select-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .calc-chip {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+    .calc-chip.active {
+      border-color: var(--gold-400);
+      background: rgba(199, 162, 103, 0.1);
+    }
+    .chip-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-1);
+      margin-bottom: 4px;
+    }
+    .chip-base {
+      font-size: 11px;
+      color: var(--gold-300);
+      font-family: var(--font-mono);
+    }
+
+    /* Calculator Result Card */
+    .calc-summary-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .summary-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-300);
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 12px;
+    }
+    .summary-price-box {
+      margin-bottom: 28px;
+    }
+    .price-kicker {
+      font-size: 12px;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .price-total {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin: 8px 0;
+    }
+    .price-note {
+      font-size: 12px;
+      color: var(--medical-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .summary-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .meta-item {
+      background: var(--surface-3);
+      padding: 14px;
+      border-radius: var(--radius-sm);
+    }
+    .meta-item .m-lbl {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-3);
+      margin-bottom: 4px;
+    }
+    .meta-item .m-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-1);
+      font-family: var(--font-mono);
+    }
+
+    /* ==========================================================================
+       MODULE 4: LIVE DOCTOR SCHEDULE & REAL-TIME BOOKING ENGINE
+       ========================================================================== */
+    .booking-engine-wrap {
+      background: var(--surface-1);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-luxe);
+    }
+    .booking-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @media (min-width: 992px) {
+      .booking-split {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    /* Doctor Shift Switcher */
+    .doctor-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .doc-select-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      cursor: pointer;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      transition: all 0.25s ease;
+    }
+    .doc-select-card.active {
+      border-color: var(--gold-400);
+      background: rgba(199, 162, 103, 0.1);
+    }
+    .doc-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border-medium);
+    }
+    .doc-info h4 {
+      font-size: 13px;
+      color: var(--text-1);
+      line-height: 1.2;
+    }
+    .doc-info p {
+      font-size: 10px;
+      color: var(--gold-300);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+
+    /* Calendar Strip */
+    .calendar-strip-wrap {
+      margin-bottom: 28px;
+    }
+    .strip-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* Date Pills Touch Scroll Optimization */
+    .date-pills-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .date-pills-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Medical Board Doctor Showcase */
+    .medical-board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 36px;
+    }
+    .doc-profile-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-luxe);
+      transition: all 0.35s ease;
+    }
+    .doc-profile-card:hover {
+      border-color: var(--gold-400);
+      transform: translateY(-4px);
+    }
+    .doc-profile-img-wrap {
+      height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+    .doc-profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s var(--ease-out);
+    }
+    .doc-profile-card:hover .doc-profile-img {
+      transform: scale(1.04);
+    }
+    .doc-profile-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(0deg, var(--surface-1) 0%, transparent 100%);
+    }
+    .doc-profile-body {
+      padding: 30px;
+    }
+    .doc-profile-tag {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--gold-400);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .doc-profile-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+    .doc-profile-desc {
+      font-size: 13.5px;
+      color: var(--text-3);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .doc-profile-meta {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+      font-size: 12px;
+      color: var(--text-4);
+      font-family: var(--font-mono);
+    }
+
+    .date-pill {
+      min-width: 72px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .date-pill.active {
+      border-color: var(--gold-400);
+      background: var(--gold-grad);
+      color: #060504;
+    }
+    .pill-day { font-size: 11px; text-transform: uppercase; font-weight: 600; }
+    .pill-num { font-size: 20px; font-weight: 800; font-family: var(--font-display); }
+
+    /* Time Slots Picker */
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .slot-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .slot-btn.active {
+      border-color: var(--gold-400);
+      background: rgba(199, 162, 103, 0.15);
+      color: var(--gold-200);
+      font-weight: 700;
+    }
+    .slot-btn.disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
+
+    /* VIP Concierge Patient Form */
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .form-group-luxe {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group-luxe label {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-3);
+      font-weight: 600;
+    }
+    .input-luxe {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 15px 18px;
+      color: var(--text-1);
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .input-luxe:focus {
+      border-color: var(--gold-400);
+    }
+
+    /* ==========================================================================
+       MODULE 5: LUMINA PRIVÉ VIP MEMBERSHIP TIERS
+       ========================================================================== */
+    .prive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .prive-card {
+      background: var(--surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.35s ease;
+    }
+    .prive-card.featured {
+      border-color: var(--border-bright);
+      background: linear-gradient(180deg, rgba(222, 196, 152, 0.08) 0%, var(--surface-1) 100%);
+      box-shadow: 0 15px 40px rgba(176, 133, 61, 0.15);
+      transform: translateY(-8px);
+    }
+    .prive-card:hover {
+      border-color: var(--gold-400);
+    }
+    .prive-tier-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-300);
+      margin-bottom: 12px;
+    }
+    .prive-name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+    .prive-desc {
+      font-size: 13.5px;
+      color: var(--text-3);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .prive-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .prive-features li {
+      font-size: 13.5px;
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .prive-features li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-400);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       FOOTER & ACCREDITATION SEAL
+       ========================================================================== */
+    footer {
+      background: #030202;
+      border-top: 1px solid var(--border-subtle);
+      padding: 100px 0 50px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 70px;
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 36px;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text-1);
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--text-3);
+      max-width: 360px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-300);
+      margin-bottom: 20px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-col a {
+      color: var(--text-3);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: var(--gold-200);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 12px;
+      color: var(--text-4);
+    }
+
+    /* Floating WhatsApp Luxury Capsule — High Visibility (Large WA Icon) */
+    .floating-wa-capsule {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: rgba(12, 10, 8, 0.97);
+      border: 1.5px solid #25D366;
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-full);
+      padding: 8px 24px 8px 8px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(37, 211, 102, 0.35);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .floating-wa-capsule:hover {
+      border-color: #2bf075;
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 35px rgba(37, 211, 102, 0.55);
+    }
+    .wa-icon-sphere {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25D366 0%, #1ea952 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .wa-icon-sphere::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37, 211, 102, 0.4);
+      animation: waPulseRing 2s infinite ease-out;
+    }
+    @keyframes waPulseRing {
+      0% { transform: scale(0.9); opacity: 1; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+    .wa-text-group .wa-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+    .wa-text-group .wa-sub {
+      font-size: 11px;
+      color: var(--gold-300);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 3px;
+    }
+    .wa-status-dot {
+      width: 7px;
+      height: 7px;
+      background: #25D366;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #25D366;
+    }
+  
+    /* ==========================================================================
+       SCROLL-TRIGGERED LUXURY ANIMATIONS (2026 SMOOTH DYNAMICS)
+       ========================================================================== */
+    
+
+    /* 2. Header State on Scroll */
+    header.header-scrolled {
+      background: rgba(6, 5, 4, 0.97) !important;
+      border-bottom: 1px solid var(--border-medium) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    /* 3. Reveal on Scroll Utilities */
+    .reveal {
+      opacity: 0;
+      transform: translateY(42px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.93) translateY(30px);
+      transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1), transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-scale.revealed {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Staggered Children Animations */
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0.08s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.revealed > *:nth-child(2) { transition-delay: 0.20s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.revealed > *:nth-child(3) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.revealed > *:nth-child(4) { transition-delay: 0.44s; opacity: 1; transform: translateY(0); }
+
+    /* Nav Link Active State on Scroll */
+    .nav-links a.active {
+      color: var(--gold-200) !important;
+    }
+    .nav-links a.active::after {
+      width: 100% !important;
+      background: var(--gold-300) !important;
+    }
+
+  
+    /* ==========================================================================
+       COMPREHENSIVE RESPONSIVE STYLES (MOBILE, TABLET, DESKTOP)
+       ========================================================================== */
+    /* Hamburger Menu Button — 44px Generous Touch Target */
+    .mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      padding: 0;
+      z-index: 10001;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu-btn:hover {
+      border-color: var(--gold-400);
+      background: rgba(222, 196, 152, 0.08);
+    }
+    .menu-icon-bars {
+      width: 20px;
+      height: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-icon-bars span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--gold-300);
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .mobile-menu-btn.active .menu-icon-bars span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+      background: var(--gold-200);
+    }
+    .mobile-menu-btn.active .menu-icon-bars span:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+    .mobile-menu-btn.active .menu-icon-bars span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+      background: var(--gold-200);
+    }
+
+    /* Mobile Navigation Drawer — Edge-to-Edge Luxury Sheet */
+    .mobile-drawer {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      height: calc(100dvh - 64px);
+      background: rgba(6, 5, 4, 0.98);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      z-index: 9999;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      border-top: 1px solid var(--border-medium);
+      display: flex;
+      flex-direction: column;
+    }
+    .mobile-drawer.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-drawer-inner {
+      padding: 24px 18px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 16px;
+      box-sizing: border-box;
+    }
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+    }
+    .mobile-nav-links a {
+      color: var(--text-2);
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+    }
+    .mobile-nav-links a:hover,
+    .mobile-nav-links a:active {
+      color: var(--gold-200);
+      background: rgba(222, 196, 152, 0.08);
+      border-color: var(--border-medium);
+      padding-left: 20px;
+    }
+    .mobile-nav-links a .nav-arrow {
+      color: var(--gold-400);
+      font-size: 13px;
+      font-family: var(--font-body);
+      transition: transform 0.25s ease;
+    }
+    .mobile-nav-links a:hover .nav-arrow {
+      transform: translateX(4px);
+    }
+    .mobile-drawer-cta {
+      margin-top: 6px;
+    }
+
+    /* Full Viewport Scroll Lock & Auto-hide WhatsApp when Drawer is Open */
+    html.drawer-open,
+    body.drawer-open {
+      overflow: hidden !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      touch-action: none !important;
+      overscroll-behavior: none !important;
+    }
+    html.drawer-open body,
+    body.drawer-open {
+      position: fixed;
+      width: 100%;
+    }
+    body.drawer-open .floating-wa-capsule {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: scale(0.6) translateY(20px) !important;
+      visibility: hidden !important;
+      transition: all 0.25s ease !important;
+    }
+
+    /* ==========================================================================
+       AIRTIGHT MULTI-DEVICE RESPONSIVE SYSTEM (DESKTOP, TABLET, MOBILE, IPHONE)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 22px;
+      }
+      .scanner-layout {
+        gap: 32px;
+      }
+      .calculator-grid {
+        gap: 32px;
+      }
+      .prive-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .nav-links {
+        display: none !important;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+      .btn-nav-cta {
+        display: none;
+      }
+      .nav-container {
+        height: 72px;
+      }
+      .mobile-drawer {
+        top: 72px;
+        height: calc(100vh - 72px);
+      }
+      .section-block {
+        padding: 75px 0;
+      }
+      .scanner-layout {
+        grid-template-columns: 1fr !important;
+        padding: 36px 24px;
+      }
+      .diagnostic-panel {
+        padding-left: 0 !important;
+        border-left: none !important;
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 28px;
+      }
+      .calculator-grid {
+        grid-template-columns: 1fr !important;
+        padding: 36px 24px;
+      }
+      .booking-split {
+        grid-template-columns: 1fr !important;
+        gap: 36px;
+      }
+      .booking-engine-wrap {
+        padding: 36px 24px;
+      }
+      .prive-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 540px;
+        margin: 0 auto;
+        gap: 24px;
+      }
+      .prive-card.featured {
+        transform: none !important;
+      }
+      .medical-board-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 540px;
+        margin: 0 auto;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        scroll-padding-top: 68px;
+      }
+      section[id] {
+        scroll-margin-top: 68px;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .nav-container {
+        height: 64px;
+      }
+      .mobile-drawer {
+        top: 64px;
+        height: calc(100dvh - 64px);
+      }
+      .brand-title {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+      }
+      .brand-meta {
+        font-size: 7px !important;
+        letter-spacing: 1.5px !important;
+      }
+      .brand-insignia {
+        width: 36px;
+        height: 36px;
+      }
+      .brand-insignia svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* Hero Stage Mobile */
+      .hero-stage {
+        padding: 36px 0 45px;
+        min-height: auto;
+      }
+      .hero-title {
+        font-size: clamp(26px, 7.5vw, 36px) !important;
+        line-height: 1.15 !important;
+        margin: 12px 0 16px !important;
+      }
+      .hero-lead {
+        font-size: 13.5px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+      .hero-actions .btn-gold,
+      .hero-actions .btn-outline-luxe {
+        width: 100%;
+        text-align: center;
+        padding: 14px 18px;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      .hero-metrics {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-top: 28px;
+        padding-top: 20px;
+      }
+      .metric-card {
+        padding: 12px 10px;
+      }
+      .metric-number {
+        font-size: 22px !important;
+        margin-bottom: 4px;
+      }
+      .metric-label {
+        font-size: 9px !important;
+        letter-spacing: 0.5px !important;
+        line-height: 1.3 !important;
+      }
+
+      /* General Section Block Mobile */
+      .section-block {
+        padding: 55px 0 !important;
+      }
+      .section-title {
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+        margin: 10px 0 !important;
+      }
+      .section-subtitle {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+      }
+      .section-header {
+        margin-bottom: 28px !important;
+      }
+
+      /* Module 1: Scanner Mobile */
+      .scanner-layout {
+        padding: 20px 14px !important;
+        gap: 20px !important;
+      }
+      .scanner-viewport {
+        min-height: 280px !important;
+      }
+      .face-svg-wrapper {
+        width: 210px !important;
+        height: 270px !important;
+        margin: 0 auto;
+      }
+      .diag-zone-title {
+        font-size: 22px !important;
+      }
+      .diag-pathology {
+        font-size: 13px !important;
+        margin-bottom: 18px !important;
+      }
+      .depth-analyzer, .prescribed-protocol {
+        padding: 14px !important;
+        margin-bottom: 18px !important;
+      }
+      .protocol-title {
+        font-size: 17px !important;
+      }
+      .protocol-desc {
+        font-size: 12.5px !important;
+      }
+
+      /* Module 2: Cost Calculator Mobile */
+      .calculator-grid {
+        padding: 20px 14px !important;
+        gap: 20px !important;
+      }
+      .calc-select-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+      .calc-chip {
+        padding: 12px 14px !important;
+      }
+      .calc-summary-card {
+        padding: 20px 14px !important;
+      }
+      .price-total {
+        font-size: 28px !important;
+      }
+      .summary-meta-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+        margin-bottom: 20px !important;
+      }
+      .meta-item {
+        padding: 10px 8px !important;
+      }
+      .meta-item .m-lbl {
+        font-size: 9px !important;
+        letter-spacing: 0.5px !important;
+      }
+      .meta-item .m-val {
+        font-size: 13px !important;
+      }
+
+      /* Medical Board Mobile */
+      .medical-board-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 20px !important;
+      }
+      .doc-profile-img-wrap {
+        height: 260px !important;
+      }
+      .doc-profile-body {
+        padding: 20px 16px !important;
+      }
+      .doc-profile-name {
+        font-size: 20px !important;
+      }
+
+      /* Module 4: Booking Engine Mobile */
+      .booking-engine-wrap {
+        padding: 20px 14px !important;
+      }
+      .booking-split {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      .doctor-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+      .doc-select-card {
+        padding: 10px 12px !important;
+      }
+      .doc-avatar {
+        width: 42px !important;
+        height: 42px !important;
+      }
+      .slots-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+      }
+      .slot-btn {
+        padding: 10px 4px !important;
+        font-size: 11px !important;
+      }
+      .date-pill {
+        min-width: 60px !important;
+        padding: 8px 4px !important;
+      }
+      .pill-num {
+        font-size: 17px !important;
+      }
+      .pill-day {
+        font-size: 10px !important;
+      }
+      .input-luxe {
+        padding: 12px 14px !important;
+        font-size: 13.5px !important;
+      }
+
+      /* Module 5: Privé Cards Mobile */
+      .prive-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 18px !important;
+      }
+      .prive-card {
+        padding: 24px 16px !important;
+        transform: none !important;
+      }
+      .prive-name {
+        font-size: 22px !important;
+      }
+
+      /* Footer Mobile */
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        margin-bottom: 36px !important;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 11px !important;
+      }
+
+      /* Floating WhatsApp Button — Mobile Circular Sphere (Zero Content Blocking) */
+      .floating-wa-capsule {
+        bottom: 16px !important;
+        right: 14px !important;
+        padding: 0 !important;
+        width: 52px !important;
+        height: 52px !important;
+        border-radius: 50% !important;
+        justify-content: center !important;
+        gap: 0 !important;
+        border: 2px solid #25D366 !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 211, 102, 0.5) !important;
+      }
+      .wa-icon-sphere {
+        width: 48px !important;
+        height: 48px !important;
+        box-shadow: none !important;
+      }
+      .wa-icon-sphere svg {
+        width: 28px !important;
+        height: 28px !important;
+      }
+      .wa-text-group {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        padding: 0 12px !important;
+      }
+      .hero-title {
+        font-size: 24px !important;
+      }
+      .hero-metrics {
+        gap: 6px !important;
+      }
+      .metric-card {
+        padding: 10px 6px !important;
+      }
+      .metric-number {
+        font-size: 19px !important;
+      }
+      .metric-label {
+        font-size: 8px !important;
+        letter-spacing: 0.3px !important;
+      }
+      .scanner-layout, .calculator-grid, .booking-engine-wrap {
+        padding: 16px 10px !important;
+      }
+      .face-svg-wrapper {
+        width: 185px !important;
+        height: 240px !important;
+      }
+      .summary-meta-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+      }
+      .date-pill {
+        min-width: 54px !important;
+        padding: 6px 2px !important;
+      }
+      .pill-num {
+        font-size: 15px !important;
+      }
+    }
+    /* Floating Quick Switcher to Admin Portal */
+    .dev-admin-portal-badge {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9998;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(13, 11, 9, 0.92);
+      border: 1px solid var(--border-medium);
+      backdrop-filter: blur(15px);
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      color: var(--gold-300);
+      text-decoration: none;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+    .dev-admin-portal-badge:hover {
+      border-color: var(--gold-400);
+      color: #FFF;
+      background: var(--surface-3);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 600px) {
+      .dev-admin-portal-badge {
+        bottom: 20px;
+        left: 14px;
+        padding: 7px 11px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==========================================================================
+       PRIMARY NAVIGATION
+       ========================================================================== -->
+  <header>
+    <div class="container nav-container">
+      <a href="#top" class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <div class="brand-insignia">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <div class="brand-title">MAISON LUMINA</div>
+          <div class="brand-meta">Haute Dermatologie & Research</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#digital-scanner">Digital Scanner</a></li>
+        <li><a href="#calculator">Simulator Biaya</a></li>
+        <li><a href="#medical-board">Dewan Dokter</a></li>
+        <li><a href="#prive-membership">Privé VIP</a></li>
+        <li><a href="#booking-engine">Reservasi VIP</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#booking-engine" class="btn-gold btn-nav-cta" style="padding: 12px 24px; font-size: 11.5px;">VIP Suite</a>
+        
+        <!-- Mobile Menu Hamburger Button (44px target with animated bars) -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Menu">
+          <div class="menu-icon-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-inner">
+      <ul class="mobile-nav-links">
+        <li><a href="#digital-scanner" onclick="closeMobileNav(event, '#digital-scanner')">Digital Face Scan <span class="nav-arrow">→</span></a></li>
+        <li><a href="#calculator" onclick="closeMobileNav(event, '#calculator')">Simulator Biaya & Durasi <span class="nav-arrow">→</span></a></li>
+        <li><a href="#medical-board" onclick="closeMobileNav(event, '#medical-board')">Dewan Dokter Sp.D.V.E <span class="nav-arrow">→</span></a></li>
+        <li><a href="#prive-membership" onclick="closeMobileNav(event, '#prive-membership')">Keanggotaan Privé VIP <span class="nav-arrow">→</span></a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="#booking-engine" onclick="closeMobileNav(event, '#booking-engine')" class="btn-gold" style="width: 100%; text-align: center; padding: 16px 18px; font-size: 13px;">
+          Reservasi VIP Suite →
+        </a>
+        <div style="margin-top: 14px; text-align: center;">
+          <!-- Admin Portal access kept private for client demo -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       HERO SECTION WITH EMITTER CANVAS
+       ========================================================================== -->
+  <section class="hero-stage">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-ambient-glow glow-gold"></div>
+    <div class="hero-ambient-glow glow-deep"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Kecantikan Abadi.
+          <em>Dipandu Sains Dermatologi Mutlak.</em>
+        </h1>
+
+        <p class="hero-lead">
+          Mengintegrasikan teknologi laser picosecond generasi ke-4, regenerasi seluler polinukleotida, dan keahlian dewan dokter spesialis kulit (Sp.D.V.E) untuk hasil estetika yang terukur dan bereputasi tinggi.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#digital-scanner" class="btn-gold">Mulai Digital Face Scan →</a>
+          <a href="#calculator" class="btn-outline-luxe">Simulasi Biaya & Durasi</a>
+        </div>
+
+        <div class="hero-metrics reveal-stagger">
+          <div class="metric-card">
+            <div class="metric-number">14,800+</div>
+            <div class="metric-label">Prosedur Medis Sukses</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">100%</div>
+            <div class="metric-label">Dokter Sp.D.V.E Resmi</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">4x</div>
+            <div class="metric-label">Akreditasi Internasional</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">99.4%</div>
+            <div class="metric-label">Tingkat Retensi Pasien VIP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODULE 1: INTERACTIVE DIGITAL FACE SCANNER & ANATOMY MAPPER
+       ========================================================================== */ -->
+  <section id="digital-scanner" class="section-block" style="background: #090807;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker-tag"><div class="kicker-dot"></div> Diagnostic Suite</div>
+        <h2 class="section-title">Pemindai Zona Wajah & Analisis Dermis</h2>
+        <p class="section-subtitle">Pilih titik anatomi pada peta wajah di bawah untuk mengidentifikasi tingkat penetrasi masalah kulit dan protokol teknologi laser yang diresepkan.</p>
+      </div>
+
+      <div class="scanner-layout reveal-scale">
+        <!-- Interactive Vector Anatomy Viewport -->
+        <div class="scanner-viewport">
+          <div class="radar-sweep"></div>
+          
+          <div class="face-svg-wrapper">
+            <!-- Precise Vector Face Profile -->
+            <svg viewBox="0 0 200 260" fill="none" stroke="rgba(222, 196, 152, 0.45)" stroke-width="1.2">
+              <!-- Facial Oval Contour -->
+              <path d="M100 20 C145 20 180 55 180 115 C180 180 145 240 100 240 C55 240 20 180 20 115 C20 55 55 20 100 20 Z" stroke-dasharray="3 3"/>
+              <!-- Hairline Subtle -->
+              <path d="M40 70 C70 45 130 45 160 70" stroke="rgba(222, 196, 152, 0.25)"/>
+              <!-- Brow Arches -->
+              <path d="M50 85 C65 78 80 82 88 88" stroke-width="1.5"/>
+              <path d="M112 88 C120 82 135 78 150 85" stroke-width="1.5"/>
+              <!-- Almond Eyes -->
+              <ellipse cx="68" cy="100" rx="14" ry="7" stroke-width="1"/>
+              <ellipse cx="132" cy="100" rx="14" ry="7" stroke-width="1"/>
+              <circle cx="68" cy="100" r="3" fill="var(--gold-400)"/>
+              <circle cx="132" cy="100" r="3" fill="var(--gold-400)"/>
+              <!-- Refined Nose Bridge -->
+              <path d="M100 95 L98 140 C95 145 92 148 100 150 C108 148 105 145 102 140 Z"/>
+              <!-- Elegant Lips -->
+              <path d="M80 178 C90 174 100 175 100 175 C100 175 110 174 120 178 C112 188 88 188 80 178 Z"/>
+              <!-- Jaw Contour -->
+              <path d="M35 130 C45 190 75 228 100 236 C125 228 155 190 165 130" stroke="rgba(222, 196, 152, 0.15)"/>
+            </svg>
+
+            <!-- Touch Pins -->
+            <!-- 1. Dahi (Forehead) -->
+            <div class="scan-pin active" style="top: 25%; left: 50%;" onclick="selectZone('forehead', this)">
+              <div class="pin-pulse"></div>
+              <div class="pin-core"></div>
+            </div>
+            <!-- 2. Periorbital (Under Eye) -->
+            <div class="scan-pin" style="top: 42%; left: 34%;" onclick="selectZone('undereye', this)">
+              <div class="pin-pulse"></div>
+              <div class="pin-core"></div>
+            </div>
+            <!-- 3. Cheeks / Malar (Pipi) -->
+            <div class="scan-pin" style="top: 55%; left: 72%;" onclick="selectZone('cheeks', this)">
+              <div class="pin-pulse"></div>
+              <div class="pin-core"></div>
+            </div>
+            <!-- 4. T-Zone / Pores -->
+            <div class="scan-pin" style="top: 54%; left: 50%;" onclick="selectZone('tzone', this)">
+              <div class="pin-pulse"></div>
+              <div class="pin-core"></div>
+            </div>
+            <!-- 5. Jawline & Double Chin -->
+            <div class="scan-pin" style="top: 84%; left: 50%;" onclick="selectZone('jawline', this)">
+              <div class="pin-pulse"></div>
+              <div class="pin-core"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diagnostic Output Board -->
+        <div class="diagnostic-panel">
+          <div>
+            <div class="diag-status-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>TARGET REGION IDENTIFIED</span>
+            </div>
+            <h3 id="diagTitle" class="diag-zone-title">Zona Dahi: Kerut Statis & Garis Ekspresi</h3>
+            <p id="diagPathology" class="diag-pathology">Penipisan kolagen akibat ekspresi repetitif muskulus frontalis disertai dehidrasi lapisan stratum korneum. Memerlukan relaksasi neuromodulator dan stimulasi fibroblas dermis.</p>
+
+            <div class="depth-analyzer">
+              <div class="depth-row">
+                <span style="color: var(--text-3);">Kedalaman Masalah Jaringan:</span>
+                <span id="diagDepthLabel" style="color: var(--gold-300); font-family: var(--font-mono);">Dermis Dangkal (1.5mm)</span>
+              </div>
+              <div class="depth-bar-track">
+                <div id="diagDepthBar" class="depth-bar-fill" style="width: 45%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-4); font-family: var(--font-mono);">
+                <span>EPIDERMIS (0.1mm)</span>
+                <span>DERMIS (1.5 - 3mm)</span>
+                <span>SMAS / SUBCUTIS (4.5mm)</span>
+              </div>
+            </div>
+
+            <div class="prescribed-protocol">
+              <div class="protocol-label">Protokol Klinis yang Diresepkan:</div>
+              <h4 id="diagProtocolTitle" class="protocol-title">Neuromodulator Matrix + Hyaluronic Hydra-Infuse</h4>
+              <p id="diagProtocolDesc" class="protocol-desc">Relaksasi garis ekspresi tanpa efek kaku ('frozen look') dipadukan dengan infus asam hialuronat berat molekul ganda untuk pemulihan kilau alami.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a id="diagWALink" href="https://wa.me/6281234567890?text=Halo%20Maison%20Lumina,%20saya%20tertarik%20dengan%20protokol%20Zona%20Dahi." target="_blank" class="btn-gold" style="width: 100%; text-align: center;">
+              Konsultasikan Protokol Ini via WhatsApp →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODULE 2: CLINICAL COST, SESSIONS & DOWNTIME CALCULATOR
+       ========================================================================== -->
+  <section id="calculator" class="section-block">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker-tag"><div class="kicker-dot"></div> Simulator Transparan</div>
+        <h2 class="section-title">Kalkulator Investasi Medis & Durasi</h2>
+        <p class="section-subtitle">Sesuaikan target perawatan dan intensitas sesi Anda. Algoritma kami menghitung estimasi biaya resmi, durasi pemulihan (downtime), dan tingkat efektivitas klinis.</p>
+      </div>
+
+      <div class="calculator-grid reveal-scale">
+        <!-- Sliders & Inputs -->
+        <div class="calc-inputs">
+          <div>
+            <div class="input-row">
+              <label>Pilihan Kategori Perawatan: <span class="val-badge" id="lblCategory">Laser & Pigmentasi</span></label>
+            </div>
+            <div class="calc-select-grid">
+              <div class="calc-chip active" onclick="setCalcCategory('laser', 'Laser & Pigmentasi', 1250000, this)">
+                <div class="chip-name">Pico Precision Laser</div>
+                <div class="chip-base">Mulai Rp1.250.000 / sesi</div>
+              </div>
+              <div class="calc-chip" onclick="setCalcCategory('facial', 'Oxy-Hydra Medical Facial', 450000, this)">
+                <div class="chip-name">Oxy-Hydra Deep Facial</div>
+                <div class="chip-base">Mulai Rp450.000 / sesi</div>
+              </div>
+              <div class="calc-chip" onclick="setCalcCategory('booster', 'Salmon DNA Cellular Booster', 1650000, this)">
+                <div class="chip-name">Salmon DNA Booster</div>
+                <div class="chip-base">Mulai Rp1.650.000 / sesi</div>
+              </div>
+              <div class="calc-chip" onclick="setCalcCategory('hifu', 'Ultrasound SMAS Lift (HIFU)', 2400000, this)">
+                <div class="chip-name">Ultrasound SMAS Lifting</div>
+                <div class="chip-base">Mulai Rp2.400.000 / sesi</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <label>
+              <span>Jumlah Sesi Terapi Terencana:</span>
+              <span class="val-badge" id="lblSessions">3 Sesi (Rekomendasi Optimal)</span>
+            </label>
+            <input type="range" min="1" max="6" value="3" class="range-luxe" id="rangeSessions" oninput="updateCalculator()">
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-4); margin-top: 6px; font-family: var(--font-mono);">
+              <span>1 Sesi (Trial)</span>
+              <span>3 Sesi (Optimal)</span>
+              <span>6 Sesi (Transformasi Penuh)</span>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <label>
+              <span>Tingkat Keparahan Kondisi Kulit:</span>
+              <span class="val-badge" id="lblSeverity">Sedang (Moderate)</span>
+            </label>
+            <input type="range" min="1" max="3" value="2" class="range-luxe" id="rangeSeverity" oninput="updateCalculator()">
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-4); margin-top: 6px; font-family: var(--font-mono);">
+              <span>Ringan (Mild)</span>
+              <span>Sedang (Moderate)</span>
+              <span>Kompleks (Intense)</span>
+            </div>
+          </div>
+
+          <!-- Addons -->
+          <div>
+            <label style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-3); display: block; margin-bottom: 12px;">
+              Protokol Tambahan Eksklusif:
+            </label>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <label style="display: flex; align-items: center; gap: 12px; font-size: 13.5px; cursor: pointer; color: var(--text-2);">
+                <input type="checkbox" id="addonHomecare" onchange="updateCalculator()" style="accent-color: var(--gold-400); width: 16px; height: 16px;">
+                Paket Serum Medis Pasca Laser (Calming Ampoule + Sunscreen SPF50) (+Rp350.000)
+              </label>
+              <label style="display: flex; align-items: center; gap: 12px; font-size: 13.5px; cursor: pointer; color: var(--text-2);">
+                <input type="checkbox" id="addonVIPSuite" onchange="updateCalculator()" style="accent-color: var(--gold-400); width: 16px; height: 16px;">
+                Private Presidential Suite + Welcome Elixir Therapy (Complimentary)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculated Summary Card -->
+        <div class="calc-summary-card">
+          <div>
+            <div class="summary-header">ESTIMASI RESMI REKOMENDASI KLINIS</div>
+            <div class="summary-price-box">
+              <div class="price-kicker">Total Investasi Medis:</div>
+              <div class="price-total" id="outTotal">Rp3.750.000</div>
+              <div class="price-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span id="outDiscountNote">Termasuk Diskon Paket 3 Sesi (Hemat 10%)</span>
+              </div>
+            </div>
+
+            <div class="summary-meta-grid">
+              <div class="meta-item">
+                <div class="m-lbl">Downtime / Recovery</div>
+                <div class="m-val" id="outDowntime">0 - 12 Jam</div>
+              </div>
+              <div class="meta-item">
+                <div class="m-lbl">Durasi per Sesi</div>
+                <div class="m-val" id="outDuration">45 - 60 Menit</div>
+              </div>
+              <div class="meta-item">
+                <div class="m-lbl">Tingkat Efektivitas</div>
+                <div class="m-val" id="outEfficacy" style="color: var(--medical-emerald);">94.8%</div>
+              </div>
+              <div class="meta-item">
+                <div class="m-lbl">Garansi Touch-Up</div>
+                <div class="m-val" style="color: var(--gold-300);">14 Hari Medis</div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="sendCalculatedQuote()" class="btn-gold" style="width: 100%;">
+            Kunci Penawaran Ini ke WhatsApp Dokter →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODULE 4: MEDICAL BOARD DIRECTORY
+       ========================================================================== -->
+  <section id="medical-board" class="section-block">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker-tag"><div class="kicker-dot"></div> Medical Credentials</div>
+        <h2 class="section-title">Dewan Dokter Spesialis Dermatologi (Sp.D.V.E)</h2>
+        <p class="section-subtitle">Setiap tindakan ditangani langsung oleh dokter spesialis kulit dan kelamin bersertifikasi resmi Kolegium Dermatologi dan Venereologi Indonesia.</p>
+      </div>
+
+      <div class="medical-board-grid reveal-stagger">
+        <!-- Doctor 1 -->
+        <div class="doc-profile-card">
+          <div class="doc-profile-img-wrap">
+            <img src="https://images.unsplash.com/photo-1594824813589-2a9c3d4e8b3b?auto=format&fit=crop&w=800&q=80" class="doc-profile-img" alt="dr. Amanda Citra">
+            <div class="doc-profile-overlay"></div>
+          </div>
+          <div class="doc-profile-body">
+            <div class="doc-profile-tag">LEAD DERMATOLOGIST & LASER SPECIALIST</div>
+            <h3 class="doc-profile-name">dr. Amanda Citra, Sp.D.V.E, FINSDV</h3>
+            <p class="doc-profile-desc">
+              Lulusan Fakultas Kedokteran Universitas Indonesia dengan spesialisasi Dermatologi & Venereologi. Memegang sertifikasi Fellowship Laser Surgery dari Seoul National University Hospital.
+            </p>
+            <div class="doc-profile-meta">
+              <div>SIP: 446.1/1920/DINKES/2023</div>
+              <div style="margin-top: 4px;">ANGGOTA AKTIF: PERDOSKI • IDI • EADV</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doc-profile-card">
+          <div class="doc-profile-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" class="doc-profile-img" alt="dr. Edward Halim">
+            <div class="doc-profile-overlay"></div>
+          </div>
+          <div class="doc-profile-body">
+            <div class="doc-profile-tag">AESTHETIC INJECTOR & ANTI-AGING RESEARCHER</div>
+            <h3 class="doc-profile-name">dr. Edward Halim, Sp.D.V.E</h3>
+            <p class="doc-profile-desc">
+              Pakar kontur wajah bio-remodelling dan peremajaan seluler polinukleotida. Pembicara rutin dalam International Master Course on Aging Science (IMCAS) Paris.
+            </p>
+            <div class="doc-profile-meta">
+              <div>SIP: 446.2/3811/DINKES/2024</div>
+              <div style="margin-top: 4px;">ANGGOTA AKTIF: PERDOSKI • IDI • IMCAS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODULE 5: LIVE DOCTOR SCHEDULE & REAL-TIME BOOKING ENGINE
+       ========================================================================== -->
+  <section id="booking-engine" class="section-block" style="background: #090807;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker-tag"><div class="kicker-dot"></div> Priority Access</div>
+        <h2 class="section-title">Engine Reservasi VIP Suite Real-Time</h2>
+        <p class="section-subtitle">Pilih dokter spesialis, tanggal preferensi kunjungan, dan slot sesi waktu Anda. Sistem langsung menyusun draf konsultasi VIP terenkripsi ke WhatsApp Concierge kami.</p>
+      </div>
+
+      <div class="booking-engine-wrap reveal-scale">
+        <div class="booking-split">
+          <!-- Calendar & Doctor Picker -->
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gold-300); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">
+              LANGKAH 1: PILIH DOKTER SPESIALIS KULIT
+            </div>
+            <div class="doctor-cards-grid">
+              <div class="doc-select-card active" onclick="selectBookingDoctor('dr. Amanda Citra, Sp.D.V.E', this)">
+                <img src="https://images.unsplash.com/photo-1594824813589-2a9c3d4e8b3b?auto=format&fit=crop&w=150&q=80" class="doc-avatar" alt="dr Amanda">
+                <div class="doc-info">
+                  <h4>dr. Amanda Citra</h4>
+                  <p>Sp.D.V.E • Laser & Melasma</p>
+                </div>
+              </div>
+              <div class="doc-select-card" onclick="selectBookingDoctor('dr. Edward Halim, Sp.D.V.E', this)">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=150&q=80" class="doc-avatar" alt="dr Edward">
+                <div class="doc-info">
+                  <h4>dr. Edward Halim</h4>
+                  <p>Sp.D.V.E • Injector & Anti-Aging</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Date Strip -->
+            <div class="calendar-strip-wrap">
+              <div class="strip-header">
+                <span style="color: var(--text-2);">LANGKAH 2: TANGGAL JADWAL KUNJUNGAN</span>
+                <span id="selectedDateText" style="color: var(--gold-300); font-family: var(--font-mono);">Besok, 22 Okt 2026</span>
+              </div>
+              <div class="date-pills-row" id="datePillsContainer">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+            <!-- Time Slots -->
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gold-300); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">
+                LANGKAH 3: PILIH SESI WAKTU VIP
+              </div>
+              <div class="slots-grid">
+                <div class="slot-btn active" onclick="selectSlot('10:00 - 11:30 (Sesi Pagi)', this)">10:00 WIB<br><small style="font-size: 9px; color: var(--gold-400);">TERSEDIA</small></div>
+                <div class="slot-btn" onclick="selectSlot('11:30 - 13:00 (Sesi Pagi)', this)">11:30 WIB<br><small style="font-size: 9px; color: var(--gold-400);">TERSEDIA</small></div>
+                <div class="slot-btn disabled">13:30 WIB<br><small style="font-size: 9px; color: var(--text-4);">PENUH</small></div>
+                <div class="slot-btn" onclick="selectSlot('14:45 - 16:15 (Sesi Siang)', this)">14:45 WIB<br><small style="font-size: 9px; color: var(--gold-400);">TERSEDIA</small></div>
+                <div class="slot-btn" onclick="selectSlot('16:30 - 18:00 (Sesi Sore)', this)">16:30 WIB<br><small style="font-size: 9px; color: var(--gold-400);">TERSEDIA</small></div>
+                <div class="slot-btn" onclick="selectSlot('18:30 - 20:00 (VIP Evening)', this)">18:30 WIB<br><small style="font-size: 9px; color: var(--gold-400);">1 SLOT SISA</small></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Details -->
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gold-300); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">
+              LANGKAH 4: DATA RESERVASI PASIEN VIP
+            </div>
+            <form class="booking-form" onsubmit="event.preventDefault(); submitBooking();">
+              <div class="form-group-luxe">
+                <label>Nama Lengkap Pasien *</label>
+                <input type="text" id="b_name" class="input-luxe" placeholder="Contoh: Jessica Alexandra" required>
+              </div>
+              <div class="form-group-luxe">
+                <label>Nomor WhatsApp Aktif *</label>
+                <input type="tel" id="b_phone" class="input-luxe" placeholder="Contoh: 081288990011" required>
+              </div>
+              <div class="form-group-luxe">
+                <label>Fokus Keluhan atau Perawatan yang Diinginkan</label>
+                <select id="b_treatment" class="input-luxe">
+                  <option value="PicoSure Fractional Laser Protocol">PicoSure Fractional Laser Protocol</option>
+                  <option value="Salmon DNA Polynucleotide Cellular Booster">Salmon DNA Polynucleotide Cellular Booster</option>
+                  <option value="Oxy-Hydra Deep Medical Facial">Oxy-Hydra Deep Medical Facial</option>
+                  <option value="HIFU SMAS High-Intensity Ultrasound Lift">HIFU SMAS High-Intensity Ultrasound Lift</option>
+                  <option value="Private Consultation & 3D Skin Analysis Medis">Private Consultation & 3D Skin Analysis Medis</option>
+                </select>
+              </div>
+              <div class="form-group-luxe">
+                <label>Catatan Riwayat Medis / Alergi (Opsional)</label>
+                <input type="text" id="b_notes" class="input-luxe" placeholder="Alergi anestesi, riwayat keloid, dll.">
+              </div>
+
+              <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">
+                Kirim Reservasi VIP ke WhatsApp Concierge →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODULE 5: LUMINA PRIVÉ VIP MEMBERSHIP TIERS
+       ========================================================================== -->
+  <section id="prive-membership" class="section-block">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="kicker-tag"><div class="kicker-dot"></div> Exclusive Privileges</div>
+        <h2 class="section-title">Lumina Privé — Keanggotaan VIP</h2>
+        <p class="section-subtitle">Akses eksklusif ke rangkaian perawatan reguler, presidential suite privat, serta prioritas penjadwalan tanpa antrean bagi pasien kehormatan kami.</p>
+      </div>
+
+      <div class="prive-grid reveal-stagger">
+        <!-- Tier 1 -->
+        <div class="prive-card">
+          <div>
+            <div class="prive-tier-badge">TIER I • ESSENTIAL GLOW</div>
+            <h3 class="prive-name">Silver Lumina</h3>
+            <p class="prive-desc">Untuk pemeliharaan hidrasi dan perawatan pencegahan penuaan dini secara berkala.</p>
+            <ul class="prive-features">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> 1x Oxy-Hydra Facial per bulan</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Diskon 10% untuk seluruh tindakan laser</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Gratis konsultasi 3D Skin Diagnostic</li>
+            </ul>
+          </div>
+          <a href="#booking-engine" class="btn-outline-luxe" style="width: 100%; text-align: center;">Pilih Silver Tier</a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="prive-card featured">
+          <div>
+            <div class="prive-tier-badge" style="color: var(--gold-400);">TIER II • MOST PREFERRED</div>
+            <h3 class="prive-name">Gold Obsidian</h3>
+            <p class="prive-desc">Program bio-regenerasi intensif bagi pasien dengan agenda publik dan kebutuhan hasil instan.</p>
+            <ul class="prive-features">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> 1x Pico Precision Laser per bulan</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> 1x Salmon DNA Booster per kuartal</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Akses Presidential Suite privat gratis</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Diskon 20% untuk paket Homecare Medis</li>
+            </ul>
+          </div>
+          <a href="#booking-engine" class="btn-gold" style="width: 100%; text-align: center;">Pilih Gold Obsidian</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="prive-card">
+          <div>
+            <div class="prive-tier-badge">TIER III • INVITATION ONLY</div>
+            <h3 class="prive-name">Black Diamond</h3>
+            <p class="prive-desc">Pengalaman kemewahan medis tanpa batas dengan dedicated personal dermatologist 24/7.</p>
+            <ul class="prive-features">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Unlimited dokter spesialis telemedicine</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Full Face Ultrasound SMAS Lift tahunan</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Layanan Home-Visit Treatment eksklusif</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg> Akses lounge VIP Bandara internasional</li>
+            </ul>
+          </div>
+          <a href="#booking-engine" class="btn-outline-luxe" style="width: 100%; text-align: center;">Inquire Black Diamond</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER & ACCREDITATIONS
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>MAISON LUMINA</h3>
+          <p>
+            Centre de Haute Dermatologie & Clinical Research Institute. Memberikan standar perawatan kulit berbasis bukti dengan presisi estetika tingkat tinggi.
+          </p>
+          <div style="margin-top: 24px; font-size: 12px; color: var(--gold-400); font-family: var(--font-mono);">
+            SENOPATI FLAGSHIP: JL. SENOPATI NO. 88, JAKARTA SELATAN
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigasi Klinis</h5>
+          <ul>
+            <li><a href="#digital-scanner">Digital Face Scan</a></li>
+            <li><a href="#calculator">Kalkulator Perawatan</a></li>
+            <li><a href="#medical-board">Profil Dokter Sp.D.V.E</a></li>
+            <li><a href="#booking-engine">Reservasi Jadwal VIP</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Teknologi Medis</h5>
+          <ul>
+            <li><a href="#">PicoSure Gen-4 Laser (USA)</a></li>
+            <li><a href="#">HIFU Ultraformer III (Korea)</a></li>
+            <li><a href="#">Rejuran Healer Polynucleotide</a></li>
+            <li><a href="#">Oxy-Hydra Micro-Detox</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legalitas & Mutu</h5>
+          <ul>
+            <li><a href="#">Sertifikasi PERDOSKI</a></li>
+            <li><a href="#">Surat Izin Operasional Dinkes</a></li>
+            <li><a href="#">Protokol Sterilisasi HEPA-14</a></li>
+            <li><!-- Admin Portal access kept private for client demo --></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="justify-content: center; text-align: center;">
+        <div>&copy; 2026 MAISON LUMINA AESTHETICS INDONESIA. SELURUH HAK CIPTA DILINDUNGI HUKUM.</div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Luxury WhatsApp Capsule — Large Solid WhatsApp Icon -->
+  <a href="https://wa.me/6281234567890?text=Halo%20VIP%20Concierge%20Maison%20Lumina,%20saya%20ingin%20konsultasi%20jadwal%20dokter%20spesialis." class="floating-wa-capsule" target="_blank" aria-label="Hubungi WhatsApp Concierge">
+    <div class="wa-icon-sphere">
+      <!-- Official Large WhatsApp Vector Logo (32x32) -->
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="#FFFFFF">
+        <path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.181 8.181 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.89 2.39 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.28z"/>
+      </svg>
+    </div>
+    <div class="wa-text-group">
+      <div class="wa-title">VIP Concierge</div>
+      <div class="wa-sub"><span class="wa-status-dot"></span> Online • Respon Cepat</div>
+    </div>
+  </a>
+
+  <!-- ==========================================================================
+       SCRIPT ENGINE: THREE-LAYER JAVASCRIPT STATE & INTERACTIVITY
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       1. HERO STARDUST CANVAS EMITTER
+       ========================================================================== */
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class StardustParticle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.7 + 0.2;
+        this.pulse = Math.random() * 0.02 + 0.005;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.alpha += Math.sin(Date.now() * this.pulse) * 0.01;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(222, 196, 152, ${Math.max(0.1, Math.min(0.8, this.alpha))})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 65; i++) {
+      particles.push(new StardustParticle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    
+
+    /* ==========================================================================
+       3. INTERACTIVE DIGITAL FACE SCANNER DATA & CONTROLLER
+       ========================================================================== */
+    const zoneData = {
+      forehead: {
+        title: "Zona Dahi: Kerut Statis & Garis Ekspresi",
+        pathology: "Penipisan serat elastin akibat kontraksi repetitif muskulus frontalis disertai dehidrasi lapisan stratum korneum. Memerlukan relaksasi neuromodulator dan stimulasi fibroblas dermis.",
+        depthLabel: "Dermis Dangkal (1.5mm)",
+        depthPercent: "45%",
+        protocolTitle: "Neuromodulator Matrix + Hyaluronic Hydra-Infuse",
+        protocolDesc: "Relaksasi garis ekspresi tanpa efek kaku ('frozen look') dipadukan dengan infus asam hialuronat berat molekul ganda untuk pemulihan kilau alami.",
+        waText: "Halo Maison Lumina, dari Digital Face Scan saya ingin konsultasi protokol Zona Dahi (Neuromodulator Matrix)."
+      },
+      undereye: {
+        title: "Zona Periorbital: Dark Circles & Kantung Mata",
+        pathology: "Kongesti sirkulasi mikrovaskular dan atrofi bantalan lemak sub-orbikularis okuli yang menyebabkan bayangan gelap (cekung) dan kerut halus 'crow's feet'.",
+        depthLabel: "Epidermis & Dermis Halus (0.8mm)",
+        depthPercent: "28%",
+        protocolTitle: "Polynucleotide Eye Booster + Carboxy Radiance",
+        protocolDesc: "Regenerasi seluler mikro dengan fragmen DNA salmon murni untuk menebalkan dermis periorbital tipis dan melancarkan mikrosirkulasi pigmen gelap.",
+        waText: "Halo Maison Lumina, dari Digital Face Scan saya ingin konsultasi protokol Zona Bawah Mata (Polynucleotide Eye Booster)."
+      },
+      cheeks: {
+        title: "Zona Pipi: Melasma Dermal & Sun Lentigines",
+        pathology: "Akumulasi pigmen melanin di lapisan dermal akibat paparan ultraviolet jangka panjang dan fluktuasi hormon. Terdapat vaskularisasi abnormal yang menyuplai pigmen.",
+        depthLabel: "Dermis Dalam (2.8mm)",
+        depthPercent: "85%",
+        protocolTitle: "PicoSure 755nm Focus Laser + Tranexamic Peel",
+        protocolDesc: "Gelombang laser pikodetik memecah kluster melanin menjadi debu mikro tanpa cedera termal, didukung asam traneksamat untuk menekan enzim tirosinase.",
+        waText: "Halo Maison Lumina, dari Digital Face Scan saya tertarik dengan protokol Zona Pipi (PicoSure 755nm Laser)."
+      },
+      tzone: {
+        title: "Zona T & Hidung: Pori Melebar & Hiper-Sebum",
+        pathology: "Hiperaktivitas kelenjar sebasea dan penurunan elastisitas dinding pori-pori yang memicu retensi keratin dan tekstur kulit kasar tidak merata.",
+        depthLabel: "Pilosebasea Dermis (1.2mm)",
+        depthPercent: "38%",
+        protocolTitle: "Carbon Spectra Laser + Oxy-Hydra Detox",
+        protocolDesc: "Aplikasi partikel nano-karbon yang diledakkan lembut oleh laser Q-switched untuk mengecilkan kelenjar minyak dan menutup pori hingga 60%.",
+        waText: "Halo Maison Lumina, dari Digital Face Scan saya ingin protokol Zona T (Carbon Spectra Laser & Hydra Detox)."
+      },
+      jawline: {
+        title: "Zona Rahang & Dagu: Skin Laxity & Jowls",
+        pathology: "Degradasi kolagen tipe I pada ligamen penopang wajah dan pelonggaran lapisan fasia SMAS yang menyebabkan jatuhnya kontur rahang (double chin).",
+        depthLabel: "Lapisan Fasia SMAS (4.5mm)",
+        depthPercent: "100%",
+        protocolTitle: "Ultrasound SMAS Lift (HIFU) + V-Line Peptide",
+        protocolDesc: "Pemanasan termal terfokus pada kedalaman 4.5mm lapisan SMAS untuk menginduksi penarikan ligamen (lifting instan) tanpa operasi bedah.",
+        waText: "Halo Maison Lumina, dari Digital Face Scan saya ingin protokol Zona Rahang (HIFU SMAS Lifting)."
+      }
+    };
+
+    function selectZone(key, el) {
+      document.querySelectorAll('.scan-pin').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+
+      const data = zoneData[key];
+      document.getElementById('diagTitle').innerText = data.title;
+      document.getElementById('diagPathology').innerText = data.pathology;
+      document.getElementById('diagDepthLabel').innerText = data.depthLabel;
+      document.getElementById('diagDepthBar').style.width = data.depthPercent;
+      document.getElementById('diagProtocolTitle').innerText = data.protocolTitle;
+      document.getElementById('diagProtocolDesc').innerText = data.protocolDesc;
+      document.getElementById('diagWALink').href = `https://wa.me/6281234567890?text=${encodeURIComponent(data.waText)}`;
+    }
+
+    /* ==========================================================================
+       4. CLINICAL COST & DOWNTIME CALCULATOR ENGINE
+       ========================================================================== */
+    let calcState = {
+      basePrice: 1250000,
+      categoryName: 'Laser & Pigmentasi',
+      sessions: 3,
+      severity: 2,
+      homecare: false
+    };
+
+    function setCalcCategory(key, name, basePrice, el) {
+      document.querySelectorAll('.calc-chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+
+      calcState.basePrice = basePrice;
+      calcState.categoryName = name;
+      document.getElementById('lblCategory').innerText = name;
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      calcState.sessions = parseInt(document.getElementById('rangeSessions').value);
+      calcState.severity = parseInt(document.getElementById('rangeSeverity').value);
+      calcState.homecare = document.getElementById('addonHomecare').checked;
+
+      // Update Labels
+      const sessionLabels = {
+        1: "1 Sesi (Trial Permulaan)",
+        2: "2 Sesi (Penanganan Awal)",
+        3: "3 Sesi (Rekomendasi Optimal)",
+        4: "4 Sesi (Transformasi Dermis)",
+        5: "5 Sesi (Intensif)",
+        6: "6 Sesi (Transformasi Penuh)"
+      };
+      document.getElementById('lblSessions').innerText = sessionLabels[calcState.sessions];
+
+      const severityLabels = {
+        1: "Ringan (Mild)",
+        2: "Sedang (Moderate)",
+        3: "Kompleks (Intense)"
+      };
+      document.getElementById('lblSeverity').innerText = severityLabels[calcState.severity];
+
+      // Multipliers
+      let discountRate = 1.0;
+      let discountText = "Harga Reguler Satuan";
+      if (calcState.sessions === 2) {
+        discountRate = 0.95;
+        discountText = "Termasuk Diskon Paket 2 Sesi (Hemat 5%)";
+      } else if (calcState.sessions >= 3 && calcState.sessions <= 5) {
+        discountRate = 0.90;
+        discountText = `Termasuk Diskon Paket ${calcState.sessions} Sesi (Hemat 10%)`;
+      } else if (calcState.sessions >= 6) {
+        discountRate = 0.85;
+        discountText = "Termasuk Diskon Paket Transformasi 6 Sesi (Hemat 15%)";
+      }
+
+      const severityFactor = calcState.severity === 1 ? 1.0 : (calcState.severity === 2 ? 1.0 : 1.15);
+      let total = (calcState.basePrice * calcState.sessions * discountRate * severityFactor);
+
+      if (calcState.homecare) {
+        total += 350000;
+      }
+
+      // Format Rupiah
+      document.getElementById('outTotal').innerText = "Rp" + Math.round(total).toLocaleString('id-ID');
+      document.getElementById('outDiscountNote').innerText = discountText;
+
+      // Downtime calculation based on category
+      if (calcState.basePrice === 450000) { // Facial
+        document.getElementById('outDowntime').innerText = "0 Jam (Glow Instan)";
+        document.getElementById('outDuration').innerText = "60 Menit";
+        document.getElementById('outEfficacy').innerText = "96.5%";
+      } else if (calcState.basePrice === 1250000) { // Laser
+        document.getElementById('outDowntime').innerText = calcState.severity === 3 ? "12 - 24 Jam" : "2 - 6 Jam";
+        document.getElementById('outDuration').innerText = "45 Menit";
+        document.getElementById('outEfficacy').innerText = "94.8%";
+      } else if (calcState.basePrice === 1650000) { // Booster
+        document.getElementById('outDowntime').innerText = "24 - 48 Jam (Papul)";
+        document.getElementById('outDuration').innerText = "60 Menit";
+        document.getElementById('outEfficacy').innerText = "98.2%";
+      } else { // HIFU
+        document.getElementById('outDowntime').innerText = "0 Jam (No Downtime)";
+        document.getElementById('outDuration').innerText = "75 Menit";
+        document.getElementById('outEfficacy').innerText = "92.4%";
+      }
+    }
+
+    function sendCalculatedQuote() {
+      const total = document.getElementById('outTotal').innerText;
+      const message = `✨ *ESTIMASI INVESTASI MEDIS — MAISON LUMINA* ✨\n\n` +
+                      `💆 *Kategori Perawatan:* ${calcState.categoryName}\n` +
+                      `📅 *Jumlah Sesi Terencana:* ${calcState.sessions} Sesi\n` +
+                      `🩺 *Kondisi Masalah Kulit:* ${document.getElementById('lblSeverity').innerText}\n` +
+                      `📦 *Paket Homecare Tambahan:* ${calcState.homecare ? 'Ya (+Rp350.000)' : 'Tidak'}\n` +
+                      `💰 *Estimasi Total Investasi:* ${total}\n\n` +
+                      `Saya ingin mengunci penawaran estimasi ini dan menjadwalkan konsultasi dokter spesialis.`;
+      
+      window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    /* ==========================================================================
+       6. LIVE DOCTOR SCHEDULE & BOOKING ENGINE
+       ========================================================================== */
+    let bookingState = {
+      doctor: 'dr. Amanda Citra, Sp.D.V.E',
+      date: '',
+      slot: '10:00 - 11:30 (Sesi Pagi)'
+    };
+
+    function selectBookingDoctor(docName, el) {
+      document.querySelectorAll('.doc-select-card').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      bookingState.doctor = docName;
+    }
+
+    function selectSlot(slotText, el) {
+      document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      bookingState.slot = slotText;
+    }
+
+    // Populate Date Strip
+    const dateContainer = document.getElementById('datePillsContainer');
+    const dayNames = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+
+    for (let i = 1; i <= 7; i++) {
+      const d = new Date();
+      d.setDate(d.getDate() + i);
+
+      const dayName = dayNames[d.getDay()];
+      const dayNum = d.getDate();
+      const monthName = monthNames[d.getMonth()];
+      const fullDateStr = `${dayName}, ${dayNum} ${monthName} ${d.getFullYear()}`;
+
+      const pill = document.createElement('div');
+      pill.className = `date-pill ${i === 1 ? 'active' : ''}`;
+      pill.innerHTML = `<div class="pill-day">${dayName}</div><div class="pill-num">${dayNum}</div><div style="font-size: 9px; opacity: 0.7;">${monthName}</div>`;
+
+      if (i === 1) {
+        bookingState.date = fullDateStr;
+        document.getElementById('selectedDateText').innerText = fullDateStr;
+      }
+
+      pill.onclick = function() {
+        document.querySelectorAll('.date-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        bookingState.date = fullDateStr;
+        document.getElementById('selectedDateText').innerText = fullDateStr;
+      };
+
+      dateContainer.appendChild(pill);
+    }
+
+    function submitBooking() {
+      const name = document.getElementById('b_name').value.trim();
+      const phone = document.getElementById('b_phone').value.trim();
+      const treatment = document.getElementById('b_treatment').value;
+      const notes = document.getElementById('b_notes').value.trim() || 'Tidak ada catatan alergi khusus';
+
+      const bookingRef = 'ML-' + Math.floor(100000 + Math.random() * 900000);
+
+      // Real-time synchronization to Admin Portal database (localStorage)
+      try {
+        const stored = localStorage.getItem('maison_lumina_db');
+        let db = stored ? JSON.parse(stored) : null;
+        if (!db) db = { bookings: [] };
+        if (!db.bookings) db.bookings = [];
+
+        db.bookings.push({
+          id: bookingRef,
+          name: name,
+          phone: phone,
+          doctor: bookingState.doctor,
+          treatment: treatment,
+          date: bookingState.date,
+          slot: bookingState.slot,
+          notes: notes,
+          status: 'MENUNGGU',
+          createdAt: new Date().toISOString().replace('T', ' ').substring(0, 16)
+        });
+        localStorage.setItem('maison_lumina_db', JSON.stringify(db));
+      } catch (e) {
+        console.warn('Sync to localStorage failed:', e);
+      }
+
+      // Read custom clinic WhatsApp number if set in Admin Portal
+      let targetWa = '6281234567890';
+      try {
+        const stored = localStorage.getItem('maison_lumina_db');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.settings && parsed.settings.waNumber) {
+            targetWa = parsed.settings.waNumber;
+          }
+        }
+      } catch (e) {}
+
+      const message = `🏛️ *KONFIRMASI RESERVASI VIP SUITE — MAISON LUMINA* 🏛️\n` +
+                      `🔖 *Ref Medis:* #${bookingRef}\n\n` +
+                      `👤 *Nama Pasien:* ${name}\n` +
+                      `📱 *WhatsApp:* ${phone}\n` +
+                      `🩺 *Dokter Penanggung Jawab:* ${bookingState.doctor}\n` +
+                      `💆 *Fokus Tindakan:* ${treatment}\n` +
+                      `📅 *Tanggal Kunjungan:* ${bookingState.date}\n` +
+                      `⏰ *Sesi Waktu:* ${bookingState.slot}\n` +
+                      `📝 *Catatan Tambahan:* ${notes}\n\n` +
+                      `Mohon prioritaskan sterilisasi ruang presidential suite dan persiapan berkas rekam medis. Terima kasih.`;
+
+      const waURL = `https://wa.me/${targetWa}?text=${encodeURIComponent(message)}`;
+      window.open(waURL, '_blank');
+    }
+  
+    /* ==========================================================================
+       SCROLL ANIMATION ENGINE: INTERSECTION OBSERVER, PROGRESS BAR & COUNTER
+       ========================================================================== */
+    // 1. Top Scroll Progress Bar & Header Glass Effect
+        const mainHeader = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      
+
+      // Header frost glass intensification
+      if (mainHeader) {
+        if (winScroll > 50) {
+          mainHeader.classList.add('header-scrolled');
+        } else {
+          mainHeader.classList.remove('header-scrolled');
+        }
+      }
+
+      // Parallax effect on ambient glow orbs
+      const glowGold = document.querySelector('.glow-gold');
+      const glowDeep = document.querySelector('.glow-deep');
+      if (glowGold) glowGold.style.transform = `translateY(${winScroll * 0.18}px)`;
+      if (glowDeep) glowDeep.style.transform = `translateY(${-winScroll * 0.12}px)`;
+    }, { passive: true });
+
+    // 2. IntersectionObserver for Reveal Animations (Fast, Reliable Mobile Trigger)
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          if (entry.target.classList.contains('hero-metrics')) {
+            startNumberCounters();
+          }
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.04,
+      rootMargin: '0px 0px 60px 0px'
+    });
+
+    document.querySelectorAll('.reveal, .reveal-scale, .reveal-stagger').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Immediate visibility sweep for elements in or near viewport
+    function sweepVisibleElements() {
+      document.querySelectorAll('.reveal, .reveal-scale, .reveal-stagger').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 120) {
+          el.classList.add('revealed');
+          if (el.classList.contains('hero-metrics')) {
+            startNumberCounters();
+          }
+        }
+      });
+    }
+    window.addEventListener('load', sweepVisibleElements);
+    window.addEventListener('hashchange', sweepVisibleElements);
+    setTimeout(sweepVisibleElements, 100);
+    setTimeout(sweepVisibleElements, 400);
+
+    // 3. Animated Number Counter on Scroll
+    let countersStarted = false;
+    function startNumberCounters() {
+      if (countersStarted) return;
+      countersStarted = true;
+
+      const metricNumbers = document.querySelectorAll('.metric-number');
+      const targets = [
+        { el: metricNumbers[0], target: 14800, suffix: '+', duration: 1800 },
+        { el: metricNumbers[1], target: 100, suffix: '%', duration: 1500 },
+        { el: metricNumbers[2], target: 4, suffix: 'x', duration: 1200 },
+        { el: metricNumbers[3], target: 99.4, suffix: '%', duration: 1800, decimal: true }
+      ];
+
+      targets.forEach(item => {
+        if (!item.el) return;
+        const startTime = performance.now();
+
+        function updateCount(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / item.duration, 1);
+          // EaseOutCubic
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+
+          if (item.decimal) {
+            const currentVal = (easeProgress * item.target).toFixed(1);
+            item.el.innerText = currentVal + item.suffix;
+          } else {
+            const currentVal = Math.floor(easeProgress * item.target).toLocaleString('id-ID');
+            item.el.innerText = currentVal + item.suffix;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            item.el.innerText = (item.decimal ? item.target : item.target.toLocaleString('id-ID')) + item.suffix;
+          }
+        }
+
+        requestAnimationFrame(updateCount);
+      });
+    }
+
+    // 4. ScrollSpy for Navigation Links
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navAnchors.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + currentSectionId) {
+          a.classList.add('active');
+        }
+      });
+    }, { passive: true });
+
+  
+    // 5. Mobile Drawer Toggle with Absolute Scroll Lock & Navigation Offset
+    let savedScrollPosition = 0;
+
+    function preventTouchScroll(e) {
+      if (!e.target.closest('#mobileDrawer')) {
+        e.preventDefault();
+      }
+    }
+
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobileDrawer');
+      const btn = document.getElementById('mobileMenuBtn');
+      const isOpen = drawer.classList.toggle('active');
+      btn.classList.toggle('active');
+
+      if (isOpen) {
+        savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        document.documentElement.classList.add('drawer-open');
+        document.body.classList.add('drawer-open');
+        document.body.style.top = `-${savedScrollPosition}px`;
+        document.addEventListener('touchmove', preventTouchScroll, { passive: false });
+        document.addEventListener('wheel', preventTouchScroll, { passive: false });
+      } else {
+        document.documentElement.classList.remove('drawer-open');
+        document.body.classList.remove('drawer-open');
+        document.body.style.top = '';
+        window.scrollTo(0, savedScrollPosition);
+        document.removeEventListener('touchmove', preventTouchScroll);
+        document.removeEventListener('wheel', preventTouchScroll);
+      }
+    }
+
+    function closeMobileNav(event, targetHash) {
+      const drawer = document.getElementById('mobileDrawer');
+      const btn = document.getElementById('mobileMenuBtn');
+      drawer.classList.remove('active');
+      btn.classList.remove('active');
+      document.documentElement.classList.remove('drawer-open');
+      document.body.classList.remove('drawer-open');
+      document.body.style.top = '';
+      document.removeEventListener('touchmove', preventTouchScroll);
+      document.removeEventListener('wheel', preventTouchScroll);
+
+      if (targetHash) {
+        if (event) event.preventDefault();
+        const targetEl = document.querySelector(targetHash);
+        if (targetEl) {
+          setTimeout(() => {
+            const headerHeight = window.innerWidth <= 768 ? 64 : 72;
+            const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            history.pushState(null, null, targetHash);
+          }, 60);
+        }
+      } else {
+        window.scrollTo(0, savedScrollPosition);
+      }
+    }
+
+// Dynamic Clinic Settings Sync from Admin Portal
+    try {
+      const stored = localStorage.getItem('maison_lumina_db');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed.settings && parsed.settings.waNumber) {
+          const customWa = parsed.settings.waNumber;
+          const floatingCapsule = document.querySelector('.floating-wa-capsule');
+          if (floatingCapsule) {
+            floatingCapsule.href = https://wa.me/?text=Halo%20VIP%20Concierge%20Maison%20Lumina,%20saya%20ingin%20konsultasi%20jadwal%20dokter%20spesialis.;
+          }
+        }
+      }
+    } catch (e) {}
+  </script>
+  <!-- Quick Access Badge to Admin Portal -->
+  <!-- Admin Portal access kept private for client demo -->
+
+</body>
+</html>

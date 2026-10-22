@@ -1,0 +1,6 @@
+# Strict exclusion per user requirement: DO NOT track or push admin portal
+admin.html
+admin*
+*.log
+.DS_Store
+Thumbs.db
